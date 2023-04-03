@@ -1,0 +1,6 @@
+[dev]
+# Just run netlify dev -d app/build/
+
+[build]
+  publish = "dist/"
+  command = "npm run build"
