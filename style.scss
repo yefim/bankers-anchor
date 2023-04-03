@@ -24,6 +24,11 @@ h1 {
   font-size: 98px;
   line-height: 110%;
   margin-bottom: 44px;
+
+  @media (max-width: 960px) {
+    font-size: 65px;
+    text-align: center;
+  }
 }
 
 p {
@@ -32,6 +37,10 @@ p {
   font-size: 100%;
   line-height: 36px;
   margin-bottom: 16px;
+
+  @media (max-width: 960px) {
+    text-align: center;
+  }
 }
 
 a {
@@ -50,6 +59,7 @@ main {
   min-height: 100vh;
 
   @media (max-width: 960px) {
+    margin-top: 100px;
     flex-direction: column;
   }
 }
@@ -58,4 +68,19 @@ main {
   flex-shrink: 0;
   max-width: 700px;
   padding: 0 100px;
+
+  @media (max-width: 960px) {
+    margin-bottom: 60px;
+  }
+}
+
+img {
+  height: calc(100vh - 70px);
+  padding: 0 80px;
+
+  @media (max-width: 960px) {
+    height: unset;
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
