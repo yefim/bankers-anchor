@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/yefim/bankers-anchor#readme",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.8.3",
-    "parcel": "^2.8.3"
+    "@parcel/transformer-sass": "2.13.3",
+    "parcel": "2.13.3"
   }
 }
