@@ -58,6 +58,17 @@
           We're volunteer run,
           <a href="https://forms.gle/tQy3PgXAXxTTWjgA7">join us</a>!
         </p>
+        <form class="idea-form" method="get" action="" netlify>
+          <p>Got ideas or feedback?</p>
+          <textarea
+            name="idea"
+            required
+            rows="3"
+            placeholder="I <3 Banker's Anchor"
+          ></textarea>
+          <input type="hidden" name="form-name" value="idea" />
+          <button type="submit">Send</button>
+        </form>
         <p>
           <a href="https://instagram.com/bankersanchor"
             >Follow us on Instagram</a
@@ -92,5 +103,34 @@
       src="https://counterscale.yefim.workers.dev/tracker.js"
       defer
     ></script>
+    <script>
+      function handleSubmit(e) {
+        e.preventDefault();
+
+        var $button = document.querySelector("button");
+        var myForm = e.target;
+        var formData = new FormData(myForm);
+
+        $button.innerText = "Sending...";
+
+        Promise.all([
+          fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: new URLSearchParams(formData).toString(),
+          }),
+          new Promise((res) => setTimeout(res, 1200)),
+        ]).then(function () {
+          $button.innerText = "Sent :)";
+          myForm.reset();
+
+          setTimeout(() => {
+            $button.innerText = "Send";
+          }, 800);
+        });
+      }
+
+      document.querySelector("form").addEventListener("submit", handleSubmit);
+    </script>
   </body>
 </html>

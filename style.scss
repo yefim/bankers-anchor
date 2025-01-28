@@ -14,13 +14,13 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   overflow-x: auto;
   min-height: 100vh;
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 98px;
   line-height: 110%;
   margin-bottom: 44px;
@@ -32,7 +32,7 @@ h1 {
 }
 
 p {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #797979;
   font-size: 100%;
   line-height: 36px;
@@ -45,7 +45,7 @@ p {
 
 a {
   color: #000000;
-  transition: color .2s linear;
+  transition: color 0.2s linear;
 }
 
 a:hover {
@@ -84,5 +84,76 @@ img {
     max-width: 100%;
     padding: 0 20px;
     margin-bottom: 60px;
+  }
+}
+
+.idea-form {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  max-width: 320px;
+  border: 1px solid #888;
+  background: #eee;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 0;
+
+  @media (max-width: 960px) {
+    margin: 0 auto;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+  }
+
+  textarea {
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+  }
+
+  button {
+    align-items: center;
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 0.375em;
+    box-shadow: none;
+    box-sizing: border-box;
+    color: #363636;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    height: 2.5em;
+    justify-content: center;
+    line-height: 1.5;
+    padding: calc(0.5em - 1px) 1em;
+    position: relative;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: top;
+    white-space: nowrap;
+  }
+
+  button:active {
+    border-color: #4a4a4a;
+    outline: 0;
+  }
+
+  button:focus {
+    border-color: #485fc7;
+    outline: 0;
+  }
+
+  button:hover {
+    border-color: #b5b5b5;
+  }
+
+  button:focus:not(:active) {
+    box-shadow: rgba(72, 95, 199, 0.25) 0 0 0 0.125em;
   }
 }
