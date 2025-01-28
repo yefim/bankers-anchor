@@ -117,6 +117,8 @@
         var myForm = e.target;
         var formData = new FormData(myForm);
 
+        if ($button.innerText !== "Send") return;
+
         $button.innerText = "Sending...";
 
         Promise.all([
@@ -127,12 +129,12 @@
           }),
           new Promise((res) => setTimeout(res, 1200)),
         ]).then(function () {
-          $button.innerText = "Sent :)";
+          $button.innerText = "✅✨";
           myForm.reset();
 
           setTimeout(() => {
             $button.innerText = "Send";
-          }, 800);
+          }, 1200);
         });
       }
 
