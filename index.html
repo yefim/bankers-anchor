@@ -58,7 +58,13 @@
           We're volunteer run,
           <a href="https://forms.gle/tQy3PgXAXxTTWjgA7">join us</a>!
         </p>
-        <form class="idea-form" data-netlify="true">
+        <form
+          class="idea-form"
+          name="idea"
+          action="/"
+          method="POST"
+          data-netlify="true"
+        >
           <p>Got ideas or feedback?</p>
           <textarea
             name="idea"
@@ -66,7 +72,7 @@
             rows="3"
             placeholder="I <3 Banker's Anchor"
           ></textarea>
-          <input type="hidden" name="form-name" value="Idea" />
+          <input type="hidden" name="form-name" value="idea" />
           <button type="submit">Send</button>
         </form>
         <p>
